@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
 import VolumeDown from '@material-ui/icons/VolumeDown';
 import VolumeUp from '@material-ui/icons/VolumeUp';
+import { Container } from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
@@ -20,25 +21,27 @@ export default function Sliders() {
   //   setValue(event.target.newValue);
   // };
   return (
-    <div className={classes.root}>
-      <Typography id="continuous-slider" gutterBottom>
-        Volume
+    <Container maxWidth="md" style={{ paddingTop: '50px' }}>
+      <div className={classes.root}>
+        <Typography id="continuous-slider" gutterBottom>
+          Volume
       </Typography>
-      <Grid container spacing={2}>
-        <Grid item>
-          <VolumeDown />
+        <Grid container spacing={2}>
+          <Grid item>
+            <VolumeDown />
+          </Grid>
+          <Grid item xs>
+            <Slider value={value} onChange={() => setValue(value)} aria-labelledby="continuous-slider" />
+          </Grid>
+          <Grid item>
+            <VolumeUp />
+          </Grid>
         </Grid>
-        <Grid item xs>
-          <Slider value={value} onChange={() => setValue(value)} aria-labelledby="continuous-slider" />
-        </Grid>
-        <Grid item>
-          <VolumeUp />
-        </Grid>
-      </Grid>
-      <Typography id="disabled-slider" gutterBottom>
-        Disabled slider
+        <Typography id="disabled-slider" gutterBottom>
+          Disabled slider
       </Typography>
-      <Slider disabled defaultValue={30} aria-labelledby="disabled-slider" />
-    </div>
+        <Slider disabled defaultValue={30} aria-labelledby="disabled-slider" />
+      </div>
+    </Container>
   );
 }
