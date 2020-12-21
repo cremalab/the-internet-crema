@@ -6,6 +6,7 @@
   "compilerOptions": {
     "noFallthroughCasesInSwitch": true,
     "jsx": "react-jsx",
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "skipLibCheck": true,
   }
 }

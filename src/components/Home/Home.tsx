@@ -21,27 +21,32 @@ const Home = () => {
 
   return (
     <Container maxWidth="md">
-      <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-        Open Menu
-      </Button>
-      <Menu
-        id="simple-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
-        <MenuItem onClick={handleClose}>
-          <Link to="/checkboxes"> Checkboxes </Link></MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link to="/brokenimages"> Broken Images </Link></MenuItem>
-        <MenuItem onClick={handleClose}>  <Link to="/dropdown"> Dropdown </Link></MenuItem>
-      </Menu>
       <Paper className="App">
+        <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+          Open Menu
+      </Button>
+        <Menu
+          id="simple-menu"
+          anchorEl={anchorEl}
+          keepMounted
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          <MenuItem onClick={handleClose}>
+
+            <Link to="/checkboxes">Checkboxes </Link></MenuItem>
+          <MenuItem onClick={handleClose}>
+            <Link to="/brokenimages">Broken Images </Link></MenuItem>
+          <MenuItem onClick={handleClose}>  <Link to="/dropdown">Dropdown </Link></MenuItem>
+          <MenuItem onClick={handleClose}>  <Link to="/datetime">Date Time </Link></MenuItem>
+          <MenuItem onClick={handleClose}>  <Link to="/sliders">Sliders</Link></MenuItem>
+        </Menu>
+
         <Box className="App-header">
           <Typography variant="h2">The Internet by Crema</Typography>
           <img src={logo} className="App-logo" alt="logo" />
         </Box>
+
       </Paper>
     </Container>
   )

@@ -1,9 +1,9 @@
 import { Container, Typography } from "@material-ui/core";
 
 const Dropdown = () => (
-  <Container maxWidth="md">
+  <Container maxWidth="md" style={{paddingTop: '50px'}}>
 
-      <Typography> Dropdown </Typography>
+      <Typography variant="h2"> Dropdown </Typography>
       <select value="Radish">
         <option value="Orange">Orange</option>
         <option value="Radish">Radish</option>
