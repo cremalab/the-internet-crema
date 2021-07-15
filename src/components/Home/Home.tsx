@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <Container maxWidth="md">
       <Paper className="App">
-        <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+        <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} style={{paddingTop: '50px'}}>
           Open Menu
       </Button>
         <Menu
