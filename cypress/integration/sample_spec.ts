@@ -1,7 +1,11 @@
 describe("App", function () {
-  it("Contains a link to learn about React", function () {
+  it("Contains The Internet by Crema", function () {
     cy.visit("/")
-    cy.get(".App-link").contains("Learn React")
-    cy.get(".App-link").should("have.attr", "href", "https://reactjs.org")
+    cy.contains("The Internet by Crema")
+
+    cy.get(".MuiButton-label").click
+    cy.contains("Checkboxes ")
+  //cy.get(".id").contains("The Internet by Crema")
+  //cy.get(".App-link").should("have.attr", "href", "https://reactjs.org")
   })
 })
