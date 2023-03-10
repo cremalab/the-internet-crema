@@ -82,12 +82,6 @@
     "test:analyze:explore": "source-map-explorer build/static/js/main.*",
     "build-storybook": "build-storybook -s public"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run prepush",
-      "prepare-commit-msg": "husky-add-issue-tracker"
-    }
-  },
   "jest": {
     "collectCoverageFrom": [
       "!node_modules",
