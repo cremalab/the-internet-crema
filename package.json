@@ -1,6 +1,6 @@
 {
   "name": "the-internet-crema",
-  "homepage": ".",
+  "homepage": "https://smasherly.github.io/the-internet-crema",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -52,9 +52,9 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "start:ci": "run-s build static",
-    "build": "react-scripts build",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test --testMatch=[ \"**/?(*.)test.ts?(x)\" ]",
     "new:component": "cremalab-scripts-web new component",
     "new:type": "cremalab-scripts-web new type",
