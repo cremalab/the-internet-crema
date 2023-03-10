@@ -9,6 +9,7 @@
     "@material-ui/pickers": "^3.2.10",
     "@types/date-fns": "^2.6.0",
     "date-fns": "^2.0.0-beta.5",
+    "gh-pages": "^5.0.0",
     "nvm": "0.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -48,6 +49,8 @@
     "webpack": "4.44.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "start:ci": "run-s build static",
     "build": "react-scripts build",
@@ -117,5 +120,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "https://smasherly.github.io/the-internet-crema"
 }
