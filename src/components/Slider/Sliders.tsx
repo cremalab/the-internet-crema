@@ -173,6 +173,9 @@ function AirbnbThumbComponent(props: AirbnbThumbComponentProps) {
 export default function CustomizedSlider() {
   return (
     <CustomContainer>
+      <Typography style={{ paddingBottom: 25 }} variant="h4">
+        Sliders
+      </Typography>
       <Box sx={{ width: 320 }}>
         <Typography gutterBottom>iOS</Typography>
         <IOSSlider
