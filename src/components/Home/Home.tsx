@@ -44,6 +44,12 @@ const Home = () => {
             </ListItemButton>
           </ListItem>
 
+          <ListItem disablePadding>
+            <ListItemButton>
+              <Link to="/autocomplete">Autocomplete</Link>
+            </ListItemButton>
+          </ListItem>
+
           <Box className="App-header">
             <Typography variant="h2">The Internet by Crema</Typography>
             <img src={logo} className="App-logo" alt="logo" />
