@@ -3,12 +3,7 @@ import logo from "../../assets/logo.svg";
 import { Box, Container, List, Paper, Typography } from "@material-ui/core";
 import { ListItem, ListItemButton } from "@mui/material";
 
-// import useState from 'react';
-
 const Home = () => {
-  // const [inputState, setInputState] = useState("")
-  // const [anchorEl, setAnchorEl] = React.useState(null);
-
   return (
     <Container maxWidth="md">
       <Paper className="App">

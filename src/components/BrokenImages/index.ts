@@ -1,2 +1,2 @@
-import BrokenImages from "./Brokenimages"
+import BrokenImages from "./Brokenimages";
 export default BrokenImages;

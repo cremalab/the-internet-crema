@@ -1,16 +1,42 @@
-import { Container, Typography } from "@material-ui/core";
+import * as React from "react";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
+import { Box, Grid } from "@material-ui/core";
 
-const Dropdown = () => (
-  // const [selected, setSelected] = React.useState("");
+export default function BasicSelect() {
+  const [age, setAge] = React.useState("");
 
-  <Container maxWidth="md" style={{ paddingTop: "50px" }}>
-    <Typography variant="h2"> Dropdown </Typography>
-    <select value="Radish">
-      <option value="Orange">Orange</option>
-      <option value="Radish">Radish</option>
-      <option value="Cherry">Cherry</option>
-    </select>
-  </Container>
-);
+  const handleChange = (event: SelectChangeEvent) => {
+    setAge(event.target.value);
+  };
 
-export default Dropdown;
+  return (
+    <Grid
+      container
+      spacing={0}
+      direction="column"
+      alignItems="center"
+      justifyContent="center"
+      style={{ minHeight: "100vh" }}
+    >
+      <Box sx={{ width: 100 }}>
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">Age</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={age}
+            label="Age"
+            onChange={handleChange}
+          >
+            <MenuItem value={10}>Ten</MenuItem>
+            <MenuItem value={20}>Twenty</MenuItem>
+            <MenuItem value={30}>Thirty</MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
+    </Grid>
+  );
+}
