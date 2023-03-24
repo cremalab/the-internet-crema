@@ -1,7 +1,7 @@
-import React from "react";
 import Checkbox from "@material-ui/core/Checkbox";
 import { Typography } from "@material-ui/core";
 import CustomContainer from "../CustomContainer";
+import React from "react";
 
 export default function Checkboxes() {
   const [checked, setChecked] = React.useState(true);
