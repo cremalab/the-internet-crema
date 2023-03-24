@@ -1,5 +1,5 @@
 import Checkbox from "@material-ui/core/Checkbox";
-import { Typography } from "@material-ui/core";
+import { Box, Typography } from "@material-ui/core";
 import CustomContainer from "../CustomContainer";
 import React from "react";
 
@@ -15,7 +15,7 @@ export default function Checkboxes() {
       <Typography style={{ paddingBottom: 5 }} variant="h4">
         Check Boxes
       </Typography>
-      <div>
+      <Box style={{ backgroundColor: "white", padding: 20 }}>
         <Checkbox
           checked={checked}
           onChange={handleChange}
@@ -48,7 +48,7 @@ export default function Checkboxes() {
           size="small"
           inputProps={{ "aria-label": "checkbox with small size" }}
         />
-      </div>
+      </Box>
     </CustomContainer>
   );
 }

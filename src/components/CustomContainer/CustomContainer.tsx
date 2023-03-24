@@ -15,7 +15,7 @@ export default function CustomContainer(props: Props) {
       alignItems="center"
       justifyContent="center"
       alignContent="center"
-      style={{ minHeight: "70vh" }}
+      style={{ minHeight: "40vh" }}
     >
       <Box width={width}>{children}</Box>
     </Grid>
