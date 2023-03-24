@@ -1,5 +1,4 @@
-import React from "react"
-import { App } from "."
+import { App } from ".";
 
 /**
  * See Storybook Docs: Writing Stories
@@ -8,6 +7,6 @@ import { App } from "."
 
 export default {
   title: "App",
-}
+};
 
-export const example = () => <App />
+export const example = () => <App />;
