@@ -5,6 +5,7 @@ import Checkboxes from "../Checkboxes";
 import Dropdown from "../Dropdown/Dropdown";
 import DateTime from "../DateTime";
 import Sliders from "../Slider";
+import { Switch } from "@material-ui/core";
 
 const Routes = () => (
   <>
@@ -14,6 +15,7 @@ const Routes = () => (
     <Route path="/dropdown" component={Dropdown} />
     <Route path="/datetime" component={DateTime} />
     <Route path="/sliders" component={Sliders} />
+    <Route path="/switch" component={Switch} />
   </>
 );
 
