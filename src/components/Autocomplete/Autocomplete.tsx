@@ -1,15 +1,18 @@
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import CustomContainer from "../CustomContainer";
+import { Typography } from "@material-ui/core";
 
 export default function ComboBox() {
   return (
     <CustomContainer>
+      <Typography style={{ paddingBottom: 25 }} variant="h4">
+        Autocomplete
+      </Typography>
       <Autocomplete
         disablePortal
         id="combo-box-demo"
         options={top100Films}
-        sx={{ width: 300 }}
         renderInput={(params) => <TextField {...params} label="Movie" />}
       />
     </CustomContainer>
