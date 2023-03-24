@@ -5,7 +5,7 @@ import Checkboxes from "../Checkboxes";
 import Dropdown from "../Dropdown/Dropdown";
 import DateTime from "../DateTime";
 import Sliders from "../Slider";
-import { Switch } from "@material-ui/core";
+import Switch from "../Switch";
 import Autocomplete from "../Autocomplete";
 
 const Routes = () => (
