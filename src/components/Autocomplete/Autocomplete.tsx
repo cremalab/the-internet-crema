@@ -1,6 +1,6 @@
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
-import CustomContainer from "../../CustomContainer";
+import CustomContainer from "../CustomContainer";
 
 export default function ComboBox() {
   return (
