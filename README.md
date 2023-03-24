@@ -6,7 +6,7 @@
 
 **🧰 Tools Used**
 
-- [Create React App](https://facebook.github.io/create-react-app/) for simple configuration 😅
+- [Vite](https://vitejs.dev/) bundler and dev env (replaces Create React App)
 - [Cypress](https://www.cypress.io) for end-to-end testing
 - [ESLint](https://eslint.org) for code linting
 - [Hygen](http://www.hygen.io) for component and util generators
