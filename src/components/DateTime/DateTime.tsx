@@ -1,19 +1,19 @@
-import 'date-fns';
-import React from 'react';
-import Grid from '@material-ui/core/Grid';
-// import * as startOfDay from "date-fns";
-import DateFnsUtils from '@date-io/date-fns';
+import "date-fns";
+import React from "react";
+import Grid from "@material-ui/core/Grid";
+
+import DateFnsUtils from "@date-io/date-fns";
 import {
   MuiPickersUtilsProvider,
   KeyboardTimePicker,
   KeyboardDatePicker,
-} from '@material-ui/pickers';
-import { Container } from '@material-ui/core';
+} from "@material-ui/pickers";
+import { Typography } from "@material-ui/core";
+import CustomContainer from "../CustomContainer";
 
-export default function  DateTime() {
-
+export default function DateTime() {
   const [selectedDate, setSelectedDate] = React.useState<Date | null>(
-    new Date('2014-08-18T21:11:54'),
+    new Date("2014-08-18T21:11:54")
   );
 
   const handleDateChange = (date: Date | null) => {
@@ -21,7 +21,10 @@ export default function  DateTime() {
   };
 
   return (
-    <Container style={{paddingTop: '50px'}}>
+    <CustomContainer>
+      <Typography style={{ paddingBottom: 25 }} variant="h4">
+        Date & Time
+      </Typography>
       <MuiPickersUtilsProvider utils={DateFnsUtils}>
         <Grid container justify="space-around">
           <KeyboardDatePicker
@@ -34,7 +37,7 @@ export default function  DateTime() {
             value={selectedDate}
             onChange={handleDateChange}
             KeyboardButtonProps={{
-              'aria-label': 'change date',
+              "aria-label": "change date",
             }}
           />
           <KeyboardDatePicker
@@ -45,7 +48,7 @@ export default function  DateTime() {
             value={selectedDate}
             onChange={handleDateChange}
             KeyboardButtonProps={{
-              'aria-label': 'change date',
+              "aria-label": "change date",
             }}
           />
           <KeyboardTimePicker
@@ -55,11 +58,11 @@ export default function  DateTime() {
             value={selectedDate}
             onChange={handleDateChange}
             KeyboardButtonProps={{
-              'aria-label': 'change time',
+              "aria-label": "change time",
             }}
           />
         </Grid>
       </MuiPickersUtilsProvider>
-    </Container>
+    </CustomContainer>
   );
 }

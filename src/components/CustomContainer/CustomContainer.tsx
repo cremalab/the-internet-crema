@@ -2,10 +2,11 @@ import { Box, Grid } from "@material-ui/core";
 
 interface Props {
   children: React.ReactNode;
+  width?: number;
 }
 
 export default function CustomContainer(props: Props) {
-  const { children } = props;
+  const { children, width } = props;
   return (
     <Grid
       container
@@ -13,9 +14,10 @@ export default function CustomContainer(props: Props) {
       direction="column"
       alignItems="center"
       justifyContent="center"
-      style={{ minHeight: "100vh" }}
+      alignContent="center"
+      style={{ minHeight: "70vh" }}
     >
-      <Box>{children}</Box>
+      <Box width={width}>{children}</Box>
     </Grid>
   );
 }

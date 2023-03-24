@@ -1,61 +1,94 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.svg";
-import { Box, Container, List, Paper, Typography } from "@material-ui/core";
+import { Container, Grid, List, Paper } from "@material-ui/core";
 import { ListItem, ListItemButton } from "@mui/material";
 
 const Home = () => {
   return (
     <Container maxWidth="md">
-      <Paper className="App">
-        <List>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <Link to="/checkboxes">Checkboxes </Link>
-            </ListItemButton>
-          </ListItem>
+      <Grid style={{ paddingTop: 30 }} container>
+        <Paper className="App">
+          <Grid item xs={12}>
+            <List>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <Link
+                    style={{ textDecoration: "none", color: "black" }}
+                    to="/checkboxes"
+                  >
+                    Checkboxes{" "}
+                  </Link>
+                </ListItemButton>
+              </ListItem>
 
-          <ListItem disablePadding>
-            <ListItemButton>
-              <Link to="/brokenimages">Broken Images </Link>
-            </ListItemButton>
-          </ListItem>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <Link
+                    style={{ textDecoration: "none", color: "black" }}
+                    to="/brokenimages"
+                  >
+                    Broken Images{" "}
+                  </Link>
+                </ListItemButton>
+              </ListItem>
 
-          <ListItem disablePadding>
-            <ListItemButton>
-              <Link to="/dropdown">Dropdown </Link>
-            </ListItemButton>
-          </ListItem>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <Link
+                    style={{ textDecoration: "none", color: "black" }}
+                    to="/dropdown"
+                  >
+                    Dropdown{" "}
+                  </Link>
+                </ListItemButton>
+              </ListItem>
 
-          <ListItem disablePadding>
-            <ListItemButton>
-              <Link to="/datetime">Date Time </Link>
-            </ListItemButton>
-          </ListItem>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <Link
+                    style={{ textDecoration: "none", color: "black" }}
+                    to="/datetime"
+                  >
+                    Date Time{" "}
+                  </Link>
+                </ListItemButton>
+              </ListItem>
 
-          <ListItem disablePadding>
-            <ListItemButton>
-              <Link to="/sliders">Sliders</Link>
-            </ListItemButton>
-          </ListItem>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <Link
+                    style={{ textDecoration: "none", color: "black" }}
+                    to="/sliders"
+                  >
+                    Sliders
+                  </Link>
+                </ListItemButton>
+              </ListItem>
 
-          <ListItem disablePadding>
-            <ListItemButton>
-              <Link to="/switch">Switch </Link>
-            </ListItemButton>
-          </ListItem>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <Link
+                    style={{ textDecoration: "none", color: "black" }}
+                    to="/switch"
+                  >
+                    Switch{" "}
+                  </Link>
+                </ListItemButton>
+              </ListItem>
 
-          <ListItem disablePadding>
-            <ListItemButton>
-              <Link to="/autocomplete">Autocomplete</Link>
-            </ListItemButton>
-          </ListItem>
-
-          <Box className="App-header">
-            <Typography variant="h2">The Internet by Crema</Typography>
-            <img src={logo} className="App-logo" alt="logo" />
-          </Box>
-        </List>
-      </Paper>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <Link
+                    style={{ textDecoration: "none", color: "black" }}
+                    to="/autocomplete"
+                  >
+                    Autocomplete
+                  </Link>
+                </ListItemButton>
+              </ListItem>
+            </List>
+          </Grid>
+        </Paper>
+      </Grid>
     </Container>
   );
 };
