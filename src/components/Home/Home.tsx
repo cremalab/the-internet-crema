@@ -68,9 +68,9 @@ const Home = () => {
                 <ListItemButton>
                   <Link
                     style={{ textDecoration: "none", color: "black" }}
-                    to="/switch"
+                    to="/switches"
                   >
-                    Switch{" "}
+                    Switches{" "}
                   </Link>
                 </ListItemButton>
               </ListItem>
