@@ -13,7 +13,7 @@ const Home = () => {
                 <ListItemButton>
                   <Link
                     style={{ textDecoration: "none", color: "black" }}
-                    to="/checkboxes"
+                    to="checkboxes"
                   >
                     Checkboxes{" "}
                   </Link>

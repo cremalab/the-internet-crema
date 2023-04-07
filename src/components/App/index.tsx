@@ -1,11 +1,16 @@
 import "./styles.css";
-import { BrowserRouter as Router } from "react-router-dom";
-import Routes from "../Routes";
-import { Link } from "react-router-dom";
-import { Box, Typography } from "@material-ui/core";
-import logo from "../../assets/logo.svg";
+import { Route, Switch } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import Home from "../Home";
+import Header from "../Header";
+import { Autocomplete } from "@mui/material";
+import BrokenImages from "../BrokenImages";
+import Checkboxes from "../Checkboxes";
+import DateTime from "../DateTime";
+import Dropdown from "../Dropdown";
+import PageNotFound from "../PageNotFound";
+import Sliders from "../Slider";
 
 const darkTheme = createTheme({
   palette: {
@@ -13,22 +18,22 @@ const darkTheme = createTheme({
   },
 });
 
-export function App() {
+export default function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <Router>
-        <Box paddingTop={10} className="App-header">
-          <Link to="/" style={{ textDecoration: "none", color: "black" }}>
-            <Typography variant="h2">
-              The Internet by Crema{" "}
-              <img src={logo} className="App-logo" alt="logo" />
-            </Typography>
-          </Link>
-        </Box>
-
-        <Routes />
-      </Router>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/brokenimages" component={BrokenImages} />
+        <Route path="/checkboxes" component={Checkboxes} />
+        <Route path="/dropdown" component={Dropdown} />
+        <Route path="/datetime" component={DateTime} />
+        <Route path="/sliders" component={Sliders} />
+        <Route path="/switch" component={Switch} />
+        <Route path="/autocomplete" component={Autocomplete} />
+        <Route path="*" component={PageNotFound} />
+      </Switch>
     </ThemeProvider>
   );
 }
