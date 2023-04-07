@@ -11,6 +11,7 @@ import DateTime from "../DateTime";
 import Dropdown from "../Dropdown";
 import PageNotFound from "../PageNotFound";
 import Sliders from "../Slider";
+import Switches from "../Switches";
 
 const darkTheme = createTheme({
   palette: {
@@ -30,7 +31,7 @@ export default function App() {
         <Route path="/dropdown" component={Dropdown} />
         <Route path="/datetime" component={DateTime} />
         <Route path="/sliders" component={Sliders} />
-        <Route path="/switch" component={Switch} />
+        <Route path="/switches" component={Switches} />
         <Route path="/autocomplete" component={Autocomplete} />
         <Route path="*" component={PageNotFound} />
       </Switch>
