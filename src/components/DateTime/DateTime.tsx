@@ -27,7 +27,7 @@ export default function DateTime() {
       </Typography>
       <Box style={{ backgroundColor: "white", padding: 20 }}>
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
-          <Grid container justify="space-around">
+          <Grid container justifyContent="space-around">
             <KeyboardDatePicker
               disableToolbar
               variant="inline"
