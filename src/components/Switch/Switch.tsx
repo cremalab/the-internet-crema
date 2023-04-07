@@ -7,10 +7,10 @@ const label = { inputProps: { "aria-label": "Switch demo" } };
 export default function BasicSwitches() {
   return (
     <CustomContainer>
-      <Typography style={{ padding: 30, paddingInline: 45 }} variant="h4">
-        Switches
+      <Typography style={{ padding: 40, paddingInline: 0 }} variant="h4">
+        Flick the Switch
       </Typography>
-      <div>
+      <div style={{ padding: 40, paddingInline: 0 }}>
         <Switch {...label} defaultChecked />
         <Switch {...label} />
         <Switch {...label} disabled defaultChecked />
