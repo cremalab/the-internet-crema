@@ -10,11 +10,12 @@ export default function ComboBox() {
         Autocomplete
       </Typography>
       <Autocomplete
-        disablePortal
-        id="combo-box-demo"
-        options={top100Films}
-        renderInput={(params) => <TextField {...params} label="Movie" />}
-      />
+      disablePortal
+      id="combo-box-demo"
+      options={top100Films}
+      getOptionLabel={(option) => `${option.label} (${option.year})`}
+      renderInput={(params) => <TextField {...params} label="Movie" sx={{ minWidth: 500 }} />}
+    />
     </CustomContainer>
   );
 }
@@ -146,4 +147,6 @@ const top100Films = [
   { label: "Snatch", year: 2000 },
   { label: "3 Idiots", year: 2009 },
   { label: "Monty Python and the Holy Grail", year: 1975 },
+  // additional movies
+  { label: "Juno", year: 2007 },
 ];
