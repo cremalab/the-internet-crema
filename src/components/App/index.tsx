@@ -4,7 +4,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Home from "../Home";
 import Header from "../Header";
-import { Autocomplete } from "@mui/material";
+import Autocomplete from "../Autocomplete";
 import BrokenImages from "../BrokenImages";
 import Checkboxes from "../Checkboxes";
 import DateTime from "../DateTime";
