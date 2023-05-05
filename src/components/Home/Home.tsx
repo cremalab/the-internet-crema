@@ -85,6 +85,17 @@ const Home = () => {
                   </Link>
                 </ListItemButton>
               </ListItem>
+
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <Link
+                    style={{ textDecoration: "none", color: "black" }}
+                    to="/Table"
+                  >
+                    Table
+                  </Link>
+                </ListItemButton>
+              </ListItem>
             </List>
           </Grid>
         </Paper>

@@ -12,6 +12,7 @@ import Dropdown from "../Dropdown";
 import PageNotFound from "../PageNotFound";
 import Sliders from "../Slider";
 import Switches from "../Switches";
+import Table from "../Table";
 
 const darkTheme = createTheme({
   palette: {
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/sliders" component={Sliders} />
         <Route path="/switches" component={Switches} />
         <Route path="/autocomplete" component={Autocomplete} />
+        <Route path="/table" component={Table} />
         <Route path="*" component={PageNotFound} />
       </Switch>
     </ThemeProvider>
