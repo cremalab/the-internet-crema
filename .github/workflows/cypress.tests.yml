@@ -9,6 +9,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    env:
+      CYPRESS_BASE_URL: https://cremalab.github.io/the-internet-crema/#/ # Set your server or API URL here
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -16,7 +19,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "14.x" # Use the desired Node.js version
+          node-version: "14.x"
 
       - name: Install Dependencies
         run: npm install
