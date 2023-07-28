@@ -1,6 +1,4 @@
-import * as React from "react";
 import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
-import CustomContainer from "../CustomContainer";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 80 },
@@ -37,16 +35,19 @@ const rows = [
 
 export default function DataTable() {
   return (
-    <div style={{ height: 400, width: "100%" }}>
-      <CustomContainer>
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          pageSize={5}
-          rowsPerPageOptions={[5]}
-          checkboxSelection
-        />
-      </CustomContainer>
-    </div>
+    <DataGrid
+      rows={rows}
+      columns={columns}
+      initialState={{
+        pagination: {
+          paginationModel: {
+            pageSize: 5,
+          },
+        },
+      }}
+      pageSizeOptions={[5, 10, 20]}
+      checkboxSelection
+      disableRowSelectionOnClick
+    />
   );
 }

@@ -8,15 +8,7 @@ interface Props {
 export default function CustomContainer(props: Props) {
   const { children, width } = props;
   return (
-    <Grid
-      container
-      spacing={0}
-      direction="column"
-      alignItems="center"
-      justifyContent="center"
-      alignContent="center"
-      style={{ minHeight: "40vh" }}
-    >
+    <Grid container alignItems="center" justifyContent="center">
       <Box width={width}>{children}</Box>
     </Grid>
   );
