@@ -1,26 +1,28 @@
-name: Deploy to Production
 
-on:
-  pull_request:
-    types:
-      - closed
+# name: Deploy to Production
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+# on:
+#   pull_request:
+#     types:
+#       - closed
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
 
-      - name: Install Node.js and npm
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: npm install
+#       - name: Install Node.js and npm
+#         uses: actions/setup-node@v2
+#         with:
+#           node-version: 14
 
-      - name: Deploy to Production
-        if: github.event.pull_request.merged == true
-        run: npm run deploy
+#       - name: Install dependencies
+#         run: npm install
+
+#       - name: Deploy to Production
+#         if: github.event.pull_request.merged == true
+#         run: npm run deploy
+
