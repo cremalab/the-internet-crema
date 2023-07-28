@@ -24,7 +24,7 @@ export default function ComboBox() {
 
   return (
     <CustomContainer>
-      <Typography style={{ paddingBottom: 25 }} variant="h4">
+      <Typography style={{ paddingBottom: 25, paddingTop: 30 }} variant="h4">
         Autocomplete
       </Typography>
       <Box paddingBottom={5}>
