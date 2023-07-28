@@ -1,7 +1,7 @@
 beforeEach(function () {
   cy.visit("/#");
   cy.contains("Autocomplete").should("exist").click();
-  cy.url().should("eq", "*/the-internet-crema/#/autocomplete");
+  cy.url().should("contain", "/the-internet-crema/#/autocomplete");
 });
 
 it("autocomplete dropdown", function () {
