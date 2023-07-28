@@ -13,6 +13,7 @@ import PageNotFound from "../PageNotFound";
 import Sliders from "../Slider";
 import Switches from "../Switches";
 import Table from "../Table";
+import { Grid } from "@mui/material";
 
 const darkTheme = createTheme({
   palette: {
@@ -25,18 +26,26 @@ export default function App() {
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <Header />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/brokenimages" component={BrokenImages} />
-        <Route path="/checkboxes" component={Checkboxes} />
-        <Route path="/dropdown" component={Dropdown} />
-        <Route path="/datetime" component={DateTime} />
-        <Route path="/sliders" component={Sliders} />
-        <Route path="/switches" component={Switches} />
-        <Route path="/autocomplete" component={Autocomplete} />
-        <Route path="/table" component={Table} />
-        <Route path="*" component={PageNotFound} />
-      </Switch>
+      <Grid
+        container
+        alignItems="center"
+        justifyContent="center"
+        direction="column"
+        height={"100%"}
+      >
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/brokenimages" component={BrokenImages} />
+          <Route path="/checkboxes" component={Checkboxes} />
+          <Route path="/dropdown" component={Dropdown} />
+          <Route path="/datetime" component={DateTime} />
+          <Route path="/sliders" component={Sliders} />
+          <Route path="/switches" component={Switches} />
+          <Route path="/autocomplete" component={Autocomplete} />
+          <Route path="/table" component={Table} />
+          <Route path="*" component={PageNotFound} />
+        </Switch>
+      </Grid>
     </ThemeProvider>
   );
 }
