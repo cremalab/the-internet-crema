@@ -13,7 +13,7 @@ const Home = () => {
         container
       >
         <Paper className="App">
-          <Grid item xs={12}>
+          <Grid data-testid="home-container" item xs={12}>
             <List>
               <ListItem disablePadding>
                 <ListItemButton>

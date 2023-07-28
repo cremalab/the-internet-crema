@@ -14,7 +14,10 @@ export default function Checkboxes() {
       <Typography style={{ paddingBottom: 5 }} variant="h4">
         Check Boxes
       </Typography>
-      <Box style={{ backgroundColor: "white", padding: 20 }}>
+      <Box
+        data-testid="Checkbox-container"
+        style={{ backgroundColor: "white", padding: 20 }}
+      >
         <Checkbox
           checked={checked}
           onChange={handleChange}
