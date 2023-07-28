@@ -3,7 +3,6 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import CustomContainer from "../CustomContainer";
 import { Typography } from "@material-ui/core";
 
 export default function BasicSelect() {
@@ -14,7 +13,7 @@ export default function BasicSelect() {
   };
 
   return (
-    <CustomContainer width={100}>
+    <div style={{ height: 400, width: "10%" }}>
       <Typography style={{ paddingBottom: 25 }} variant="h4">
         Dropdown
       </Typography>
@@ -32,6 +31,6 @@ export default function BasicSelect() {
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>
       </FormControl>
-    </CustomContainer>
+    </div>
   );
 }

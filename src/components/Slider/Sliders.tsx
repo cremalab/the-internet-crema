@@ -7,7 +7,6 @@ import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import Tooltip from "@mui/material/Tooltip";
 import Box from "@mui/material/Box";
-import CustomContainer from "../CustomContainer/CustomContainer";
 
 function ValueLabelComponent(props: SliderValueLabelProps) {
   const { children, value } = props;
@@ -172,8 +171,8 @@ function AirbnbThumbComponent(props: AirbnbThumbComponentProps) {
 
 export default function CustomizedSlider() {
   return (
-    <CustomContainer>
-      <Typography style={{ paddingBottom: 25, paddingTop: 30 }} variant="h4">
+    <>
+      <Typography style={{ paddingBottom: 25 }} variant="h4">
         Sliders
       </Typography>
       <Box sx={{ width: 320 }}>
@@ -211,6 +210,6 @@ export default function CustomizedSlider() {
           defaultValue={[20, 40]}
         />
       </Box>
-    </CustomContainer>
+    </>
   );
 }

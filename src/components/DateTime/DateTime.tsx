@@ -9,7 +9,6 @@ import {
   KeyboardDatePicker,
 } from "@material-ui/pickers";
 import { Box, Typography } from "@material-ui/core";
-import CustomContainer from "../CustomContainer";
 
 export default function DateTime() {
   const [selectedDate, setSelectedDate] = React.useState<Date | null>(
@@ -21,7 +20,7 @@ export default function DateTime() {
   };
 
   return (
-    <CustomContainer>
+    <>
       <Typography style={{ paddingBottom: 25 }} variant="h4">
         Date & Time
       </Typography>
@@ -65,6 +64,6 @@ export default function DateTime() {
           </Grid>
         </MuiPickersUtilsProvider>
       </Box>
-    </CustomContainer>
+    </>
   );
 }
