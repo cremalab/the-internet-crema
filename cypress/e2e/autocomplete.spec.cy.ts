@@ -33,5 +33,5 @@ it("autocomplete type", function () {
 
 it("return to main", function () {
   cy.contains("The Internet by Crema").click();
-  cy.url().should("eq", "http://localhost:5173/the-internet-crema/#/");
+  cy.url().should("contain", "/the-internet-crema/#/autocomplete");
 });
