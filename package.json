@@ -63,6 +63,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "serve": "vite preview",
+    "cypress": "npm run cy:test",
     "start:ci": "run-s build static",
     "test": "react-scripts test --testMatch=[ \"**/?(*.)test.ts?(x)\" ]",
     "new:component": "cremalab-scripts-web new component",
