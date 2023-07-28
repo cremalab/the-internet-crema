@@ -3,7 +3,7 @@ name: Cypress Tests
 on:
   push:
     branches:
-      - develop
+      - develop # Replace with the branch you want to trigger the tests on (e.g., master)
 
 jobs:
   test:
