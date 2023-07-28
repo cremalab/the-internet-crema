@@ -1,12 +1,11 @@
 import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import robsworld from "../../assets/robsworld.png";
-import CustomContainer from "../CustomContainer";
 
 function PageNotFound() {
   return (
-    <CustomContainer>
-      <Typography style={{ padding: 40 }} variant="h4">
+    <>
+      <Typography style={{ paddingBottom: 40 }} variant="h4">
         Welcome to Rob's World©
       </Typography>
       <div>
@@ -18,7 +17,7 @@ function PageNotFound() {
       <p>
         <Link to="/">Click here</Link> to leave Rob's world.
       </p>
-    </CustomContainer>
+    </>
   );
 }
 

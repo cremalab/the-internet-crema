@@ -4,10 +4,9 @@ import { ListItem, ListItemButton } from "@mui/material";
 
 const Home = () => {
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="lg">
       <Grid
         style={{
-          paddingTop: 30,
           justifyContent: "center",
           alignItems: "center",
         }}

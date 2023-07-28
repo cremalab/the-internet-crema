@@ -4,7 +4,7 @@ import logo from "../../assets/logo.svg";
 
 function Header() {
   return (
-    <Box paddingTop={10} className="App-header">
+    <Box paddingTop={10} className="App-header" marginBottom={10}>
       <Link to="/" style={{ textDecoration: "none", color: "black" }}>
         <Typography variant="h2">
           The Internet by Crema{" "}
