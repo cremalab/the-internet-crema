@@ -25,9 +25,10 @@ const columns: GridColDef[] = [
 
 export default function DataTable() {
   const [rows, setRows] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); // State to manage loading status
 
   useEffect(() => {
-    const apiUrl = "https://randomuser.me/api/?results=10"; // Set the number of results to 25
+    const apiUrl = "https://randomuser.me/api/?results=10"; // Set the number of results to 10
 
     // Make an HTTP GET request to the API
     fetch(apiUrl)
@@ -50,18 +51,37 @@ export default function DataTable() {
         }));
 
         setRows(updatedRows);
+        setIsLoading(false); // Data fetching is completed, set isLoading to false
       })
       .catch((error) => {
         // Handle any errors that occurred during the request
         console.error(error);
+        setIsLoading(false); // Error occurred, set isLoading to false
       });
   }, []);
 
   return (
     <div style={{ height: 400, width: "100%", paddingTop: 30 }}>
-      <CustomContainer>
-        <DataGrid rows={rows} columns={columns} checkboxSelection />
-      </CustomContainer>
+      {isLoading ? (
+        // Render a loading indicator or skeleton component while data is being fetched
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "20vh",
+            fontSize: "100px",
+            fontWeight: "bold",
+          }}
+        >
+          HMMMMMM...
+        </div>
+      ) : (
+        // Render the DataGrid when data is fetched
+        <CustomContainer>
+          <DataGrid rows={rows} columns={columns} checkboxSelection />
+        </CustomContainer>
+      )}
     </div>
   );
 }
