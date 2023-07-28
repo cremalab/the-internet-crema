@@ -1,0 +1,17 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  Deploy to Prod:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy to Production
+        run: npm run build
