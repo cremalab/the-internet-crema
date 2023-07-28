@@ -5,7 +5,7 @@ const label = { inputProps: { "aria-label": "Switch demo" } };
 
 export default function BasicSwitches() {
   return (
-    <Grid item justifyContent="center" alignItems="center">
+    <>
       <Typography style={{ paddingInline: 0 }} variant="h4">
         Flick the Switch
       </Typography>
@@ -15,6 +15,6 @@ export default function BasicSwitches() {
         <Switch {...label} disabled defaultChecked />
         <Switch {...label} disabled />
       </div>
-    </Grid>
+    </>
   );
 }

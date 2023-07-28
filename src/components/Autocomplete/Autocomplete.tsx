@@ -1,6 +1,5 @@
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
-import CustomContainer from "../CustomContainer";
 import { Box, Typography } from "@material-ui/core";
 import { useEffect, useState } from "react";
 
@@ -23,8 +22,8 @@ export default function ComboBox() {
   }, [selectedFilm]);
 
   return (
-    <CustomContainer>
-      <Typography style={{ paddingBottom: 25, paddingTop: 30 }} variant="h4">
+    <>
+      <Typography style={{ paddingBottom: 25 }} variant="h4">
         Autocomplete
       </Typography>
       <Box paddingBottom={5}>
@@ -47,7 +46,7 @@ export default function ComboBox() {
           <TextField {...params} label="Movie" sx={{ minWidth: 500 }} />
         )}
       />
-    </CustomContainer>
+    </>
   );
 }
 

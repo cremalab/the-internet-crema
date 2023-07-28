@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
+import { Grid } from "@mui/material";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 80 },
@@ -60,7 +61,7 @@ export default function DataTable() {
   }, []);
 
   return (
-    <div style={{ height: 400, width: "100%", paddingTop: 30 }}>
+    <div style={{ height: 400, width: "50%" }}>
       {isLoading ? (
         // Render a loading indicator or skeleton component while data is being fetched
         <div
@@ -77,9 +78,9 @@ export default function DataTable() {
         </div>
       ) : (
         // Render the DataGrid when data is fetched
-        <CustomContainer>
+        <Grid item justifyContent="center" alignItems="center">
           <DataGrid rows={rows} columns={columns} checkboxSelection />
-        </CustomContainer>
+        </Grid>
       )}
     </div>
   );
