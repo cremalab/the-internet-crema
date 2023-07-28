@@ -5,7 +5,14 @@ import { ListItem, ListItemButton } from "@mui/material";
 const Home = () => {
   return (
     <Container maxWidth="md">
-      <Grid style={{ paddingTop: 30 }} container>
+      <Grid
+        style={{
+          paddingTop: 30,
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        container
+      >
         <Paper className="App">
           <Grid item xs={12}>
             <List>
@@ -13,9 +20,9 @@ const Home = () => {
                 <ListItemButton>
                   <Link
                     style={{ textDecoration: "none", color: "black" }}
-                    to="checkboxes"
+                    to="/autocomplete"
                   >
-                    Checkboxes{" "}
+                    Autocomplete
                   </Link>
                 </ListItemButton>
               </ListItem>
@@ -27,6 +34,17 @@ const Home = () => {
                     to="/brokenimages"
                   >
                     Broken Images{" "}
+                  </Link>
+                </ListItemButton>
+              </ListItem>
+
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <Link
+                    style={{ textDecoration: "none", color: "black" }}
+                    to="checkboxes"
+                  >
+                    Checkboxes{" "}
                   </Link>
                 </ListItemButton>
               </ListItem>
@@ -71,17 +89,6 @@ const Home = () => {
                     to="/switches"
                   >
                     Switches{" "}
-                  </Link>
-                </ListItemButton>
-              </ListItem>
-
-              <ListItem disablePadding>
-                <ListItemButton>
-                  <Link
-                    style={{ textDecoration: "none", color: "black" }}
-                    to="/autocomplete"
-                  >
-                    Autocomplete
                   </Link>
                 </ListItemButton>
               </ListItem>
